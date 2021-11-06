@@ -1,0 +1,40 @@
+<template>
+    
+    <lightning-card>
+        <div slot="test">
+            <h3>Employee Detail Page Sample</h3>
+        </div>
+        <div>
+            <lightning-input label="First Name" value={Name} onchange={empHandle}></lightning-input>
+        </div>
+        <div>
+            <lightning-input label="Last Name" value={Last_Name} onchange={empHandle}></lightning-input>
+        </div>
+        <div>
+            <lightning-input type="date" label="DOB" value={DOB} onchange={empHandle}></lightning-input>
+        </div>
+        <div>
+            <lightning-input   label="Contry" value={Contry} onchange={empHandle}></lightning-input>
+        </div>
+        <div slot="footer">
+            <lightning-button label="Create Employee Record" variant="brand" onclick={insertContactAction}></lightning-button>        
+          </div>
+          <template if:true={showpicklist}>
+            <lightning-combobox label="Contry"
+                                            name="Contry"
+                                            placeholder="Select Country by picklist"
+                                            options={Contrydata} 
+                                            onchange={fetchDependentValue}
+                                            >
+                            </lightning-combobox>
+            </template>
+            <template if:true={showdependent}>
+            <lightning-combobox label="Industry"
+                                            name="Customer Priority"
+                                            options={Contrydata} 
+                                        
+                                             >
+                            </lightning-combobox>
+                        </template>
+    </lightning-card>
+</template>

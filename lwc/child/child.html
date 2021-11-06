@@ -1,0 +1,23 @@
+<template>
+  
+<lightning-card title="Delete Contact Record in LWC" icon-name="custom:custom14">
+    <table border="1" cellspacing="0" cellpadding="5" style="border-collapse:collapse;" class="tblColPad">
+        <tr>
+            <th>Title</th>
+            <th>Form Name</th>
+            <th>Logo</th>
+            <th> </th>
+        </tr>
+        <template for:each={getForm.data} for:item="conItem">
+            <tr key={conItem.Id}>
+                <td>{conItem.Title__c}</td>
+                <td>{conItem.Name}</td>
+                <td>{conItem.Logo__C}</td>
+                <td><lightning-button label="Add item" size="small" variant="neutral" onclick={handleContactDelete} value={conItem.Id} icon-name="utility:delete" icon-position="right" class="deleteButton"></lightning-button></td>
+            </tr>
+        </template>
+    </table>
+
+ 
+</lightning-card>
+</template>

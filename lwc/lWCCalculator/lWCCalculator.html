@@ -1,0 +1,30 @@
+<template>
+    <h1>sample calculator</h1>
+
+    <lightning-card>
+        <lightning-input value={firstNumber} name="FNO" label="Enter first NO" onchange={handleChang} ></lightning-input>
+        <lightning-input value={secondNumber} name="SNO" label="Enter Second NO" onchange={handleChang} ></lightning-input>
+
+        <div>
+            result={result}
+        </div>
+        <div class="Redcolor"v >
+            <lightning-button label="Add" onclick={addition}> </lightning-button>  
+
+        </div>
+        <div>
+            <lightning-button label="Mul" onclick={multiplication}> </lightning-button>  
+
+        </div>
+        <div>
+            <lightning-button label="Sub" onclick={substraction}> </lightning-button>  
+
+        </div>
+        <div>
+            <lightning-button label="Div" onclick={division}> </lightning-button>  
+
+        </div>
+    
+    </lightning-card>
+    
+</template>

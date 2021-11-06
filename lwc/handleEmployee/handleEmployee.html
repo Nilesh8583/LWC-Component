@@ -1,0 +1,27 @@
+<template>
+    <lightning-card >
+        <div class="slds-grid">
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={accData} for:item="acitem">
+                    <tr key={acitem.Id}>
+                    <td>{acitem.Name}</td>
+                    <td>{acitem.Email__c}</td>
+                    <td>{acitem.Phone}</td>
+                </tr>
+                </template>
+            </tbody>    
+        </table>
+    </div>
+    <lightning-button></lightning-button>
+    </lightning-card>
+    
+</template>
